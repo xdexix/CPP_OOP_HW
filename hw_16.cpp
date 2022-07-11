@@ -1,4 +1,4 @@
-﻿#include <vector>
+#include <vector>
 #include <string>
 #include <iomanip>
 #include <iostream>
@@ -13,14 +13,12 @@ class Student
 	string surname;
 	int age;
 public:
-	friend class QueueRing;
 	Student();
-    ~Student() {};
+    	~Student() {};
 	Student(string _name, string _surname, int _age);
-    int GetAge() { return age; };
+    	int GetAge() { return age; };
 	friend ostream& operator << (ostream& os, const Student& student);
 };
-
 Student::Student()
 {
 	name = " ";
@@ -37,6 +35,7 @@ ostream& operator << (ostream& os, const Student& student)
 	os << setw(15) << student.name << setw(15) << student.surname << setw(3) << student.age << endl;
 	return os;
 }
+
 bool find_a(int &n)
 {
     if (n % 3 == 0)
