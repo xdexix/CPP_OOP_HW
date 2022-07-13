@@ -1,4 +1,4 @@
-﻿#include <vector>
+#include <vector>
 #include <string>
 #include <iomanip>
 #include <iostream>
@@ -13,11 +13,10 @@ class Student
 	string surname;
 	int age;
 public:
-	friend class QueueRing;
 	Student();
-    ~Student() {};
+    	~Student() {};
 	Student(string _name, string _surname, int _age);
-    int GetAge() { return age; };
+    	int GetAge() { return age; };
 	friend ostream& operator << (ostream& os, const Student& student);
 };
 
